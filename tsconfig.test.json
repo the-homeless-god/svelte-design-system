@@ -1,0 +1,24 @@
+{
+  "include": ["src/**/*", "cypress/fixtures/**/*"],
+  "exclude": ["node_modules/*"],
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": ["DOM", "ESNEXT", "WebWorker"],
+    "module": "commonjs",
+    "target": "ESNEXT",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "typeRoots": ["src/typings"],
+    "types": ["svelte", "@types/mocha", "cypress"],
+    "outDir": "dist",
+    "skipLibCheck": true,
+    "declaration": true,
+    "strict": true,
+    "emitDeclarationOnly": false,
+    "sourceMap": true
+  }
+}
