@@ -3,7 +3,7 @@ const scss = require('rollup-plugin-scss')
 const environmentConfig = require('./environment')
 
 const scssConfiguration = {
-  prefix: '',
+  prefix: '@import \'src/styles/variables.scss\';',
 }
 
 const scssRollupConfig = (postfix, dev) => ({
