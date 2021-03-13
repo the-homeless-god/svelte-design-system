@@ -27,7 +27,7 @@ module.exports = {
       && terser({
         module: true,
       }),
-    isDev && environmentConfig.isCodeCoverage && testConfig.checkCodeCoverage(),
+    environmentConfig.isCodeCoverage && testConfig.checkCodeCoverage(),
     isDev && environmentConfig.isNodeDev && livereload('public'),
   ],
   preserveEntrySignatures: false,
