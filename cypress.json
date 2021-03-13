@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:5000",
+  "video": false,
+  "screenshots": false,
+  "integrationFolder": "./src/",
+  "testFiles": "**/*.spec.ts"
+}
