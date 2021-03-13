@@ -1,0 +1,14 @@
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  color: $default-color;
+  margin: 0;
+  padding: $default-padding;
+  box-sizing: border-box;
+  font-family: $default-font;
+}
