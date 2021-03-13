@@ -1,0 +1,7 @@
+node_modules
+lib
+public/assets
+.env
+.nyc_output
+coverage
+.eslintcache
