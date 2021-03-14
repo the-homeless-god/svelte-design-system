@@ -16,10 +16,10 @@ const testConfig = require('./test')
 const { isDev } = environmentConfig
 
 module.exports = {
-  ...ioConfig.getClientConfig(),
+  ...ioConfig.getDevelopmentConfig(),
   plugins: [
     cssBundler.getClientConfig(),
-    svelteConfig.getClientConfig(),
+    svelteConfig.getDevelopmentConfig(),
     resolveConfig.getClientConfig(),
     jsConfig.useCommonJs(),
     svg({ dev: isDev }),

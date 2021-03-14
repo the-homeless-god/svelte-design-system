@@ -14,10 +14,10 @@
     "resolveJsonModule": true,
     "typeRoots": ["src/typings"],
     "types": ["svelte", "@types/mocha", "cypress"],
-    "outDir": "lib",
+    "outDir": "dist",
     "skipLibCheck": true,
-    "sourceMap": true,
     "declaration": true,
+    "strict": true,
     "emitDeclarationOnly": false
   }
 }

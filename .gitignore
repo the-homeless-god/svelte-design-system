@@ -7,3 +7,4 @@ public/assets/js
 .nyc_output
 coverage
 .eslintcache
+dist

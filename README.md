@@ -5,8 +5,13 @@ Template for design systems based on Svelte with NPM package for component libra
 ## Development
 
 ```shell
-cp template.env .env
 npm run dev
+```
+
+## Build
+
+```shell
+npm run build
 ```
 
 ## Local Environment Variables

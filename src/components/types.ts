@@ -1,9 +1,10 @@
 export enum Sizes {
   small,
   big,
+  max,
 }
 
 export interface Size {
-  width: number
-  height: number
+  width: number | string
+  height: number | string
 }

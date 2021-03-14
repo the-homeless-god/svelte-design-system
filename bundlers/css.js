@@ -7,7 +7,7 @@ const scssConfiguration = {
 }
 
 const scssRollupConfig = (postfix, dev) => ({
-  output: `${environmentConfig.cssContainer}/${postfix}.css`,
+  output: `${dev ? environmentConfig.file.css : environmentConfig.file.module}/${postfix}.css`,
   sourceMap: dev,
   sourceMapEmbed: dev,
   prefix: scssConfiguration.prefix,
@@ -23,7 +23,7 @@ const getSvelteStyles = () => ({
 
 const getScssConfig = (path) => scss(scssRollupConfig(path, environmentConfig.isDev))
 
-const getClientConfig = () => getScssConfig('bundle')
+const getClientConfig = () => getScssConfig(environmentConfig.isDev ? 'bundle' : 'styles')
 
 module.exports = {
   configuration: scssConfiguration,

@@ -15,6 +15,7 @@
     "@rollup/plugin-typescript": "^8.1.0",
     "@tsconfig/svelte": "^1.0.10",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "dotenv": "^8.2.0",
     "fontello-cli": "^0.6.2",
@@ -38,7 +39,7 @@
     "svelte-preprocess": "^4.6.1",
     "ts-loader": "^8.0.14",
     "tslib": "^2.1.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.0"
   },
   "description": "Template for design systems based on Svelte with NPM package for component library and easy support",
   "homepage": "https://github.com/Zimtir/svelte-design-system",
@@ -75,6 +76,7 @@
     }
   },
   "main": "src/main.ts",
+  "svelte": "src/components/index.ts",
   "name": "svelte-design-system",
   "nyc": {
     "cache": false,
@@ -87,12 +89,12 @@
   },
   "scripts": {
     "autobuild": "rollup -c -w",
-    "build": "rollup -c && tsc src/main.ts",
-    "build:package": "tsc",
+    "build": "npm run clean && rollup -c",
+    "clean": "rm -rf dist",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "depcheck": "npx depcheck",
-    "dev": "run-p start:dev autobuild",
+    "dev": "cross-env IS_DEVELOPMENT=true NODE_ENV=development run-p start:dev autobuild",
     "eslint": "eslint --cache --ext .js,.ts, src",
     "eslint:dump": "eslint --print-config ./.eslintrc.json",
     "eslint:fix": "eslint --fix ./*.js ./src/*.ts ./src/**/*.ts --max-warnings=0",
@@ -117,7 +119,7 @@
     "stylelint:scss:fix": "npm run stylelint:scss --fix",
     "svelte:check": "svelte-check --ignore='src/node_modules'",
     "test:dev": "npm run test:headless:dev && npm run test:coverage",
-    "test:prod": "npm run test:headless:prod && npm run test:coverage",
+    "test:prod": "cross-env IS_CODE_COVERAGE_ENABLED=true npm run test:headless:prod && npm run test:coverage",
     "test:coverage": "nyc report --reporter=text-summary",
     "test:docker": "./node_modules/.bin/cypress run",
     "test:headless:dev": "start-server-and-test dev http://localhost:5000 test:headless",
@@ -162,5 +164,9 @@
     "type": "git",
     "url": "https://github.com/Zimtir/svelte-design-system.git"
   },
-  "version": "0.0.2"
+  "version": "0.0.2",
+  "files": [
+    "dist",
+    "README.md"
+  ]
 }

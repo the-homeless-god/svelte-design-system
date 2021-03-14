@@ -29,16 +29,32 @@ const preprocessor = preprocess({
   },
 })
 
-const getClientConfig = () =>
+const getConfiguration = ({ emitCss, compilerOptions }) =>
   svelte({
-    emitCss: true,
+    emitCss,
     preprocess: preprocessor,
+    compilerOptions,
+  })
+
+const getDevelopmentConfig = () =>
+  getConfiguration({
+    emitCss: true,
     compilerOptions: {
       dev: environmentConfig.isDev,
       hydratable: true,
     },
   })
 
+const getProductionConfig = () =>
+  getConfiguration({
+    emitCss: false,
+    include: ['src/components/**'],
+    compilerOptions: {
+      hydratable: true,
+    },
+  })
+
 module.exports = {
-  getClientConfig,
+  getDevelopmentConfig,
+  getProductionConfig,
 }

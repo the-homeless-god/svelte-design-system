@@ -1,14 +1,24 @@
 const environmentConfig = require('./environment')
 
-const getIOConfig = () => ({
-  input: 'src/main.ts',
-  output: {
-    file: `${environmentConfig.jsContainer}/bundle.js`,
-    format: 'iife',
-    sourcemap: environmentConfig.isDev,
-  },
+const getIOConfig = (input, output, external) => ({
+  input,
+  output,
+  external,
 })
 
 module.exports = {
-  getClientConfig: getIOConfig,
+  getDevelopmentConfig: () =>
+    getIOConfig('src/main.ts', {
+      file: `${environmentConfig.file.js}/bundle.js`,
+      format: 'iife',
+      sourcemap: environmentConfig.isDev,
+    }),
+  getProductionConfig: (input = 'src/components/index.ts') => ({
+    umd: getIOConfig(input, {
+      file: `${environmentConfig.file.module}/index.js`,
+      format: 'umd',
+      name: 'components',
+    }),
+    es: getIOConfig(input, { file: `${environmentConfig.file.module}/index.mjs`, format: 'esm' }, ['svelte/internal']),
+  }),
 }
