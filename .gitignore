@@ -1,6 +1,8 @@
 node_modules
 lib
-public/assets
+public/assets/css
+public/assets/font
+public/assets/js
 .env
 .nyc_output
 coverage
