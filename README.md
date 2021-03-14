@@ -9,6 +9,13 @@ cp template.env .env
 npm run dev
 ```
 
+## Local Environment Variables
+
+- `NODE_ENV` - enable livereload
+- `IS_DEVELOPMENT` - enable source maps
+- `IS_CODE_COVERAGE_ENABLED` - enable test coverage output
+  - Note: use it only at execution of tests
+
 ## GitHub Environment Variables
 
 - NPM_REGISTRY_URL
