@@ -2,6 +2,7 @@ const json = require('@rollup/plugin-json')
 const typescript = require('@rollup/plugin-typescript')
 const { terser } = require('rollup-plugin-terser')
 const livereload = require('rollup-plugin-livereload')
+const svg = require('rollup-plugin-svelte-svg')
 
 const cssBundler = require('./css')
 const svelteConfig = require('./svelte')
@@ -21,6 +22,7 @@ module.exports = {
     svelteConfig.getClientConfig(),
     resolveConfig.getClientConfig(),
     jsConfig.useCommonJs(),
+    svg({ dev: isDev }),
     typescript({ sourceMap: isDev, inlineSources: isDev }),
     json(),
     !isDev
