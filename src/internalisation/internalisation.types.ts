@@ -3,5 +3,5 @@ export enum Exceptions {
 }
 
 export enum Messages {
-  GREETING = 'Hello world!',
+  GREETING = 'Welcome to Svelte Design System',
 }

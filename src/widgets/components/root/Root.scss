@@ -3,6 +3,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  background: #f7f7f7;
 }
 
 body {
@@ -11,4 +12,8 @@ body {
   padding: $default-padding;
   box-sizing: border-box;
   font-family: $default-font;
+}
+
+.root {
+  margin: 20px;
 }
