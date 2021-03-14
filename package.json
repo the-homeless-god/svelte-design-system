@@ -118,6 +118,7 @@
     "stylelint:css:fix": "npm run stylelint:css --fix",
     "stylelint:scss:fix": "npm run stylelint:scss --fix",
     "svelte:check": "svelte-check --ignore='src/node_modules'",
+    "test": "npm run test:prod",
     "test:dev": "npm run test:headless:dev && npm run test:coverage",
     "test:prod": "cross-env IS_CODE_COVERAGE_ENABLED=true npm run test:headless:prod && npm run test:coverage",
     "test:coverage": "nyc report --reporter=text-summary",

@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Tests
-        run: npm run test:prod
+        run: npm run test
 
   publish:
     if: github.ref == 'refs/heads/master'
