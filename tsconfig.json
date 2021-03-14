@@ -12,7 +12,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "typeRoots": ["typings"],
+    "typeRoots": ["src/typings"],
     "types": ["svelte", "@types/mocha", "cypress"],
     "outDir": "lib",
     "skipLibCheck": true,
