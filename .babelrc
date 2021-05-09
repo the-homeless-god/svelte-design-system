@@ -1,3 +1,6 @@
 {
-  "plugins": ["istanbul"]
+  "presets": ["@babel/preset-env"],
+  "plugins": ["istanbul"],
+  "sourceMaps": true,
+  "retainLines": true
 }

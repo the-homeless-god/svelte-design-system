@@ -58,13 +58,11 @@
     {
       "files": ["**/*.ts"],
       "parser": "@typescript-eslint/parser",
-      "extends": [
-        "plugin:import/typescript",
-        "plugin:@typescript-eslint/recommended"
-      ],
+      "extends": ["plugin:import/typescript", "plugin:@typescript-eslint/recommended"],
       "plugins": ["@typescript-eslint"],
       "rules": {
-        "@typescript-eslint/ban-ts-comment": "off"
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-explicit-any": "warn"
       }
     },
     {

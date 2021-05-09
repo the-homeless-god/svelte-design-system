@@ -13,14 +13,23 @@ const file = {
   module: `${container.production}`,
 }
 
-const getBooleanVariable = (key) => JSON.parse(environment[key] || null)
+const getBooleanVariable = (key) => {
+  const value = environment[key]
 
+  if (value !== undefined && value !== null && value.length > 0) {
+    return value.toLowerCase() === 'true'
+  }
+
+  return false
+}
+
+const isCodeCoverage = getBooleanVariable('IS_CODE_COVERAGE_ENABLED')
 const isDev = getBooleanVariable('IS_DEVELOPMENT')
 const isNodeDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
   isDev,
   isNodeDev,
-  isCodeCoverage: getBooleanVariable('IS_CODE_COVERAGE_ENABLED'),
+  isCodeCoverage,
   file,
 }

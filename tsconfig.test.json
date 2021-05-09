@@ -1,10 +1,10 @@
 {
   "include": ["src/**/*", "cypress/fixtures/**/*"],
   "exclude": ["node_modules/*"],
-  "extends": "@tsconfig/svelte/tsconfig.json",
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "lib": ["DOM", "ESNEXT", "WebWorker"],
-    "module": "ESNEXT",
+    "module": "commonjs",
     "target": "ESNEXT",
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
