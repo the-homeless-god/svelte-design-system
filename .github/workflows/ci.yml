@@ -19,7 +19,7 @@ jobs:
         run: npm run install:prod:full
 
       - name: Lint
-        run: npm run eslint && npm run stylelint && npm run svelte:check
+        run: npm run eslint && npm run stylelint
 
       - name: Icons
         run: npm run fontello
