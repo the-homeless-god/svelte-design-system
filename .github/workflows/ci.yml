@@ -31,7 +31,7 @@ jobs:
           skip_step: install
 
       - name: Tests
-        run: npm run test:coverage:prod
+        run: npm run test
 
       - name: Test coverage
         if: ${{ github.ref != 'refs/heads/master' }}
