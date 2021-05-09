@@ -19,6 +19,13 @@ module.exports = {
       format: 'umd',
       name: 'components',
     }),
-    es: getIOConfig(input, { file: `${environmentConfig.file.module}/index.mjs`, format: 'esm' }, ['svelte/internal']),
+    es: getIOConfig(
+      input,
+      {
+        file: `${environmentConfig.file.module}/index.mjs`,
+        format: 'esm',
+      },
+      ['svelte/internal'],
+    ),
   }),
 }

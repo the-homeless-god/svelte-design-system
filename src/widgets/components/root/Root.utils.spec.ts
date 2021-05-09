@@ -1,3 +1,4 @@
+import { expect } from 'chai'
 import { Messages } from '../../../internalisation/internalisation.types'
 import { getRootContent } from './Root.utils'
 

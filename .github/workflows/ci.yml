@@ -9,6 +9,7 @@ on:
 
 jobs:
   build:
+    timeout-minutes: 10
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -18,16 +19,26 @@ jobs:
         run: npm run install:prod:full
 
       - name: Lint
-        run: npm run eslint && npm run stylelint && npm run svelte:check
+        run: npm run eslint && npm run stylelint
 
       - name: Icons
         run: npm run fontello
 
-      - name: Build
-        run: npm run build
+      - name: Build & Analyze size of bundle
+        uses: andresz1/size-limit-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          skip_step: install
 
       - name: Tests
         run: npm run test
+
+      - name: Test coverage
+        if: ${{ github.ref != 'refs/heads/master' }}
+        uses: romeovs/lcov-reporter-action@v0.2.16
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          lcov-file: ./coverage/lcov.info
 
   publish:
     if: github.ref == 'refs/heads/master'
@@ -39,10 +50,16 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           registry-url: ${{ secrets.NPM_REGISTRY_URL }}
-          scope: ${{ secrets.NPM_PACKAGE_SCOPE }}
+          # scope: ${{ secrets.NPM_PACKAGE_SCOPE }}
 
       - name: Install packages
         run: npm ci
+
+      - name: Release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_WRITE_TOKEN  }}
 
       - run: npm publish
         env:
