@@ -24,7 +24,12 @@ jobs:
       - name: Icons
         run: npm run fontello
 
+      - name: Build
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: npm run build
+
       - name: Build & Analyze size of bundle
+        if: ${{ github.ref != 'refs/heads/master' }}
         uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
