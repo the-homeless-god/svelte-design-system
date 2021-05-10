@@ -1,5 +1,14 @@
-# Version
+# Issue
 
-0.0.x
+https://github.com/future-code-lab/svelte-design-system/issues/
 
-## Additional information
+## Description
+
+## TODO
+
+- [ ] Self-review
+- [ ] Manual testing
+- [ ] Labels
+- [ ] Issues
+- [ ] No pre-commit errors
+- [ ] Unit tests
