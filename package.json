@@ -88,7 +88,8 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "main": "src/main.ts",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
   "svelte": "src/components/index.ts",
   "nyc": {
     "cache": false,
