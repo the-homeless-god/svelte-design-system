@@ -1,10 +1,6 @@
-# Issue
+# Description
 
-https://github.com/future-code-lab/svelte-design-system/issues/
-
-## Description
-
-## TODO
+# TODO
 
 - [ ] Self-review
 - [ ] Manual testing
