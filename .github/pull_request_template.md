@@ -1,10 +1,10 @@
 # Description
 
-# TODO
+# Verification
 
-- [ ] Self-review
-- [ ] Manual testing
-- [ ] Labels
 - [ ] Issues
+- [ ] Labels
+- [ ] Manual testing
 - [ ] No pre-commit errors
+- [ ] Self-review
 - [ ] Unit tests
