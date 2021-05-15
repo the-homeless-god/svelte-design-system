@@ -28,14 +28,14 @@
     "bundlesize": "^0.18.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
-    "dotenv": "^8.6.0",
+    "dotenv": "^9.0.2",
     "fontello-cli": "^0.6.2",
     "node-sass": "^5.0.0",
     "open": "^8.0.8",
     "postcss": "^8.2.14",
     "rollup": "^2.47.0",
     "rollup-plugin-istanbul": "^3.0.0",
-    "rollup-plugin-livereload": "^1.0.4",
+    "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-scss": "^2.6.1",
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-svelte-svg": "^0.2.3",
@@ -192,7 +192,7 @@
     "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
     "ts-node": "^9.1.1",
-    "webpack": "^5.12.2"
+    "webpack": "^5.37.0"
   },
   "repository": {
     "type": "git",
