@@ -28,7 +28,7 @@
     "bundlesize": "^0.18.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
-    "dotenv": "^8.6.0",
+    "dotenv": "^9.0.2",
     "fontello-cli": "^0.6.2",
     "node-sass": "^5.0.0",
     "open": "^8.0.8",
