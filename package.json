@@ -188,7 +188,7 @@
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^1.4.2",
     "semantic-release": "^17.4.2",
-    "start-server-and-test": "^1.12.1",
+    "start-server-and-test": "^1.12.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^20.0.0",
     "ts-node": "^9.1.1",
