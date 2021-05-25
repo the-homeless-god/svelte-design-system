@@ -199,7 +199,8 @@
     "url": "https://github.com/future-code-lab/svelte-design-system.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "tag": "latest"
   },
   "files": [
     "dist",
