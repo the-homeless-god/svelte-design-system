@@ -22,7 +22,7 @@ module.exports = {
     svelteConfig.getDevelopmentConfig(),
     resolveConfig.getClientConfig(),
     jsConfig.useCommonJs(),
-    svg({ dev: isDev }),
+    svg.svelteSVG({ dev: isDev }),
     typescript({ sourceMap: isDev, inlineSources: isDev }),
     json(),
     !isDev
