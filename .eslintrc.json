@@ -34,7 +34,7 @@
     "max-len": ["error", { "code": 120 }],
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "no-console": "off",
     "no-tabs": [
       "error",

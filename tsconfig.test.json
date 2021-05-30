@@ -3,7 +3,7 @@
   "exclude": ["node_modules/*"],
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "lib": ["DOM", "ESNEXT", "WebWorker"],
+    "lib": ["DOM", "dom.iterable", "ESNEXT", "WebWorker"],
     "module": "commonjs",
     "target": "ESNEXT",
     "allowSyntheticDefaultImports": true,
