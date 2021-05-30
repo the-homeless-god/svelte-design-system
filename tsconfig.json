@@ -3,7 +3,7 @@
   "exclude": ["node_modules/*"],
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
-    "lib": ["DOM", "ESNEXT", "WebWorker"],
+    "lib": ["DOM", "dom.iterable", "ESNEXT", "WebWorker"],
     "module": "ESNEXT",
     "target": "ESNEXT",
     "allowSyntheticDefaultImports": true,

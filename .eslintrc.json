@@ -34,7 +34,7 @@
     "max-len": ["error", { "code": 120 }],
     "import/prefer-default-export": "off",
     "import/no-extraneous-dependencies": "off",
-    "indent": ["error", 2],
+    "indent": ["error", 2, { "SwitchCase": 1 }],
     "no-console": "off",
     "no-tabs": [
       "error",
@@ -52,7 +52,9 @@
     "quotes": ["error", "single"],
     "semi": [2, "never"],
     "linebreak-style": 0,
-    "global-require": 0
+    "global-require": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
   },
   "overrides": [
     {

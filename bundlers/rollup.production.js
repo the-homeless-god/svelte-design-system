@@ -17,7 +17,7 @@ const plugins = [
   svelteConfig.getProductionConfig(),
   resolveConfig.getClientConfig(),
   jsConfig.useCommonJs(),
-  svg({ dev: isDev }),
+  svg.svelteSVG({ dev: isDev }),
   typescript({ sourceMap: isDev, inlineSources: isDev }),
   json(),
   terser({
