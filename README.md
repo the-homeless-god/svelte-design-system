@@ -1,4 +1,4 @@
-# svelte-design-system
+# Svelte Design System
 
 Template for design systems based on Svelte with NPM package for component library and easy support
 
