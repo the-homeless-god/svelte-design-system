@@ -52,7 +52,7 @@
     "svelte-preprocess": "^4.7.3",
     "ts-loader": "^9.2.2",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.3"
   },
   "description": "Template for design systems based on Svelte with NPM package for component library and easy support",
   "homepage": "https://github.com/Zimtir/svelte-design-system",
