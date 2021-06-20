@@ -12,7 +12,7 @@
     "@babel/core": "^7.14.3",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.13.15",
-    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-env": "^7.14.5",
     "@babel/register": "^7.13.16",
     "@babel/runtime": "^7.14.0",
     "@rollup/plugin-babel": "^5.2.2",
@@ -27,13 +27,13 @@
     "babel-loader": "^8.2.2",
     "bundlesize": "^0.18.1",
     "cross-env": "^7.0.3",
-    "css-loader": "^5.2.4",
+    "css-loader": "^5.2.6",
     "dotenv": "^9.0.2",
     "fontello-cli": "^0.6.2",
     "node-sass": "^6.0.0",
     "open": "^8.2.0",
     "postcss": "^8.2.14",
-    "rollup": "^2.50.4",
+    "rollup": "^2.52.1",
     "rollup-plugin-istanbul": "^3.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-scss": "^2.6.1",
@@ -52,7 +52,7 @@
     "svelte-preprocess": "^4.7.3",
     "ts-loader": "^9.2.2",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.4"
   },
   "description": "Template for design systems based on Svelte with NPM package for component library and easy support",
   "homepage": "https://github.com/Zimtir/svelte-design-system",
@@ -175,7 +175,7 @@
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.3.4",
     "cypress": "^7.4.0",
-    "eslint": "^7.15.0",
+    "eslint": "^7.28.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.23.3",
@@ -192,7 +192,7 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^20.0.0",
     "ts-node": "^9.1.1",
-    "webpack": "^5.37.0"
+    "webpack": "^5.39.1"
   },
   "repository": {
     "type": "git",
