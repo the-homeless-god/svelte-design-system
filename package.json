@@ -33,7 +33,7 @@
     "node-sass": "^6.0.0",
     "open": "^8.2.0",
     "postcss": "^8.2.14",
-    "rollup": "^2.50.4",
+    "rollup": "^2.52.1",
     "rollup-plugin-istanbul": "^3.0.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-scss": "^2.6.1",
